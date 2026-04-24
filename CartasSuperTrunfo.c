@@ -9,7 +9,8 @@ int main()
    Codigo_Carta2[5], Nome_Cidade1[40],Nome_Cidade2[40], buffer[50];
 
    int Populacao1, Populacao2, numero_pontos_turisticos1, numero_pontos_turisticos2;
-   float Area1, pib1, Area2, pib2;
+   float Area1, pib1, Area2, pib2, Densidade_populacional1, Densidade_populacional2,
+   pib_per_capita1, pib_per_capita2;
 
    printf("Criação da primeira carta do Super Trunfo!!!\n\n"); 
 
@@ -87,6 +88,13 @@ int main()
    
    system("clear"); //limpar a tela do terminal com a biblioteca stdlib.h
 
+   //Calculo da densidade populacional
+   Densidade_populacional1 = Populacao1 / Area1; 
+   Densidade_populacional2 = Populacao2 / Area2;
+
+   //Calculo do pib per capita
+   pib_per_capita1 = pib1 / Populacao1;
+   pib_per_capita2 = pib2 / Populacao2;
 
    //Criação da primeira carta do super trunfo
    //Print das informações colhidas
@@ -98,7 +106,8 @@ int main()
    printf("Área: %.2f km² \n", Area1);
    printf("PIB: %.2f bilhões de reais\n", pib1);
    printf("Número de Pontos Turísticos: %i\n", numero_pontos_turisticos1);
-
+   printf("PIB per Capita: %.2f reais\n", pib_per_capita1);
+   printf("Densidade populacional: %f hab/km²\n", Densidade_populacional1);
 
    printf("\n");
    //Criação da segunda carta do super trunfo
@@ -112,6 +121,8 @@ int main()
    printf("Área: %.2f km² \n", Area2);
    printf("PIB: %.2f bilhões de reais\n", pib2);
    printf("Número de Pontos Turísticos: %i\n", numero_pontos_turisticos2);
+   printf("PIB per Capita: %.2f reais\n", pib_per_capita2);
+   printf("Densidade populacional: %f hab/km²\n", Densidade_populacional2);
    
    return 0;
 }
